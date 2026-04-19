@@ -4,8 +4,6 @@
 * {
     box-sizing: border-box;
     -webkit-text-size-adjust: none; /* Brání iOS měnit velikost písma */
-    margin: 0;
-    padding: 0;
 }
 
 body {
