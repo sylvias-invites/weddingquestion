@@ -21,19 +21,27 @@ body {
 .screen {
     width: 100%;
     max-width: 500px;
-    height: 100dvh;
+    /* ZMĚNA: Povolíme stránce růst podle obsahu, pokud je to potřeba */
+    min-height: 100dvh; 
+    height: auto; 
+    
     background: #f4d8e6;
     margin: 0 auto;
-    padding: 10px;
+    /* Přidáme trochu větší padding nahoře a dole, aby text nelepil na okraje */
+    padding: 20px 10px 40px 10px; 
+    
     box-sizing: border-box;
     text-align: center;
+    position: relative;
     display: flex;
     flex-direction: column;
-    /* VRÁCENO: Vše bude u sebe uprostřed */
-    justify-content: center;
+    justify-content: flex-start; /* Změna: začne nahoře, nebude se mačkat na střed */
     align-items: center;
-    gap: 5px; /* Toto určuje přesnou mezeru mezi prvky */
-    overflow: hidden;
+    gap: 15px; /* Mezera mezi prvky, aby nebyly nalepené na sobě */
+    
+    /* ZMĚNA: Pokud je obsah delší, dovolíme mobilu scrollovat */
+    overflow-y: auto; 
+    overflow-x: hidden;
 }
 
 /* Nadpisy Great Vibes (ozdobné) */
