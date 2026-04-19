@@ -1,0 +1,94 @@
+﻿﻿﻿
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Hey you</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sylvias-invites.github.io/weddinginvitation/">
+    <meta property="og:title" content="Hey you">
+    <meta property="og:image" content="https://sylvias-invites.github.io/weddingquestion/heart_nahled.png">
+    <meta property="og:image:secure_url" content="https://sylvias-invites.github.io/weddingquestion/heart_nahled.png">
+    <meta property="og:image:type" content="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=block" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=9.999">
+
+    <script>
+        // Počkáme, až se načtou všechna písma, než zobrazíme tělo stránky
+        document.fonts.ready.then(function () {
+            document.body.style.visibility = "visible";
+        });
+    </script>
+
+    <style>
+        /* Na začátku tělo skryjeme */
+        body {
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="screen">
+        <h1 id="main-title">Péťa & Anička</h1>
+        <div class="initials" style="font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">06. 06. 2026</div>
+
+        <div class="heart-wrapper">
+            <img src="listky.png" id="heart-background" class="hidden-at-start" alt="pozadi">
+            <div class="invite-container">
+                <div class="invite-text">
+                    <h2>Budeš moje družička?<br>❤️</h2>
+
+                    <div id="countdown" style="display: flex; justify-content: center; gap: 12px; margin-top: 5px; font-family: 'Montserrat', sans-serif;">
+                        <div style="text-align: center; min-width: 45px;">
+                            <span id="days" style="display: block; font-size: 1.4rem; font-weight: bold; color: #d27285;">00</span>
+                            <small style="font-size: 0.6rem; text-transform: uppercase; color: #666;">Dní</small>
+                        </div>
+                        <div style="text-align: center; min-width: 45px;">
+                            <span id="hours" style="display: block; font-size: 1.4rem; font-weight: bold; color: #d27285;">00</span>
+                            <small style="font-size: 0.6rem; text-transform: uppercase; color: #666;">Hod</small>
+                        </div>
+                        <div style="text-align: center; min-width: 45px;">
+                            <span id="minutes" style="display: block; font-size: 1.4rem; font-weight: bold; color: #d27285; ">00</span>
+                            <small style="font-size: 0.6rem; text-transform: uppercase; color: #666;">Min</small>
+                        </div>
+                        <div style="text-align: center; min-width: 45px;">
+                            <span id="seconds" style="display: block; font-size: 1.4rem; font-weight: bold; color: #d27285; ">00</span>
+                            <small style="font-size: 0.6rem; text-transform: uppercase; color: #666;">Sek</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id="scratch"></canvas>
+        </div>
+
+        <div id="info-button-container" class="hidden-info" style="display: none; opacity: 0;">
+            <div class="info-pill">
+                <span class="info-icon">ⓘ</span>
+                <span class="info-text">Pro doladění dresscode se Vám ozveme</span>
+            </div>
+        </div>
+
+        <p id="instruction">Setřete srdíčko</p>
+
+        <div id="confetti-container"></div>
+
+        <div id="button-container" class="hidden-buttons">
+            <button class="btn btn-yes" onclick="answerYes()">Yes</button>
+
+            <button class="btn btn-no" id="noBtn">No</button>
+        </div>
+
+    </div>
+    <script src="script.js?v=5.88"></script>
+</body>
+</html>
