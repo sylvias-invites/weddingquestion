@@ -3,18 +3,16 @@
 
 * {
     box-sizing: border-box;
+    -webkit-text-size-adjust: none; /* Brání iOS měnit velikost písma */
 }
 
 body {
-    background: #f4d8e6; /* Pozadí celé stránky */
+    background: #f4d8e6;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Great Vibes', cursive;
-    overflow-x: hidden; /* Zabrání vodorovnému posouvání */
+    width: 100%;
+    /* Odstraněno justify/align center z body, aby to netlačilo .screen */
+    font-family: 'Alex Brush', cursive;
     color: #2d2d2d;
 }
 
@@ -22,17 +20,14 @@ body {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
-    /* Důležité pro mobily - přizpůsobí se výšce */
-    min-height: 100dvh;
+    min-height: 100dvh; /* Přesná výška mobilního displeje */
+    background: #f4d8e6;
     display: flex;
     flex-direction: column;
+    justify-content: center; /* Všechno hezky na střed */
     align-items: center;
-    /* Místo center dáme flex-start a použijeme "pružiny" */
-    justify-content: flex-start;
     padding: 20px;
-    box-sizing: border-box;
-    background: #f4d8e6;
-    overflow-y: auto;
+    position: relative;
     overflow-x: hidden;
 }
 
