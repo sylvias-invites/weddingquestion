@@ -11,29 +11,26 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    display: flex;
     font-family: 'Great Vibes', cursive;
     color: #2d2d2d;
     overflow-x: hidden;
-    justify-content: center;
-    align-items: center;
+    /* Žádný flex, žádné centrování tady! */
 }
 
 .screen {
     width: 100%;
     max-width: 500px;
-    min-height: 100dvh; /* dvh lépe sedí na mobily */
-    margin: 0 auto; /* Toto zajistí vycentrování celého bloku na střed */
-    background: #f4d8e6;
-    padding: 10px; /* Zrušíme padding-top: 10vh a dáme rovnoměrný okraj */
+    height: 100dvh; /* Změna z min-height na pevnou výšku */
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertikální centrování */
-    align-items: center; /* Horizontální centrování prvků */
+    justify-content: center; /* Držíme střed */
+    align-items: center;
+    padding: 10px;
+    gap: 5px; /* Toto vytvoří malé mezery mezi nadpisem, datem a srdcem automaticky */
     position: relative;
     overflow: hidden;
-}
-   
+} 
 
 h1, .initials, .heart-wrapper, #instruction {
     flex-shrink: 0; /* PŘÍSNÝ ZÁKAZ SMRŠŤOVÁNÍ */
@@ -50,6 +47,7 @@ h1 {
     font-size: 3.8rem !important;
     margin: 0 !important; /* Žádný margin, mezeru řeší 'gap' v .screen */
     line-height: 1.1;
+    flex-shrink: 0 !important; /* ZÁKAZ SMRŠTĚNÍ */
 }
 
 
@@ -59,6 +57,7 @@ h1 {
     color: black;
     margin: 0 !important; /* Přitáhne iniciály k h1 a srdci */
     line-height: 1;
+    flex-shrink: 0 !important; /* ZÁKAZ SMRŠTĚNÍ */
 }
 
 #instruction {
@@ -69,6 +68,7 @@ h1 {
     font-size: 1.4rem !important;
     letter-spacing: 2px;
     line-height: 1;
+    flex-shrink: 0 !important; /* ZÁKAZ SMRŠTĚNÍ */
 }
 
 .invite-text h2 {
@@ -106,10 +106,11 @@ h1 {
     position: relative;
     z-index: 2;
     margin: 10px auto !important; /* Menší mezery nad a pod */
-    flex-shrink: 0; /* Zakáže prohlížeči srdce mačkat */
+    flex-shrink: 0 !important; /* Zakáže prohlížeči srdce mačkat */
     background: transparent !important;
     opacity: 0;
     transition: opacity 0.5s ease;
+    flex-shrink: 0 !important; /* ZÁKAZ SMRŠTĚNÍ */
 }
 
 .heart-wrapper.ready {
@@ -302,6 +303,7 @@ canvas {
     margin-top: 25px !important;
     opacity: 0; /* Z JS se změní na 1 */
     transition: opacity 0.8s ease-in-out !important;
+    flex-shrink: 0 !important; /* ZÁKAZ SMRŠTĚNÍ */
 }
 
 /* Celý kontejner (pill) - kompaktnější verze */
@@ -365,5 +367,22 @@ canvas {
     .info-icon {
         width: 18px;
         height: 18px;
+    }
+}
+
+
+/* Nastavení pro tablety a počítače (obrazovka širší než 768px) */
+@media (min-width: 768px) {
+    .screen {
+        padding-top: 0; /* Zrušíme ten horní okraj, co jsme dávali kvůli mobilu */
+    }
+
+    h1 {
+        font-size: 5rem; /* Na velkém monitoru si můžeme dovolit větší nadpis */
+        margin-bottom: 30px;
+    }
+
+    .heart-wrapper {
+        max-width: 450px; /* Srdce na desktopu může být o něco větší */
     }
 }
