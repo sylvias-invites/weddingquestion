@@ -21,27 +21,30 @@ body {
 .screen {
     width: 100%;
     max-width: 500px;
-    /* ZMĚNA: Povolíme stránce růst podle obsahu, pokud je to potřeba */
-    min-height: 100dvh; 
-    height: auto; 
-    
-    background: #f4d8e6;
     margin: 0 auto;
-    /* Přidáme trochu větší padding nahoře a dole, aby text nelepil na okraje */
-    padding: 20px 10px 40px 10px; 
-    
-    box-sizing: border-box;
-    text-align: center;
-    position: relative;
+    /* Důležité pro mobily - přizpůsobí se výšce */
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Změna: začne nahoře, nebude se mačkat na střed */
     align-items: center;
-    gap: 15px; /* Mezera mezi prvky, aby nebyly nalepené na sobě */
-    
-    /* ZMĚNA: Pokud je obsah delší, dovolíme mobilu scrollovat */
-    overflow-y: auto; 
+    /* Místo center dáme flex-start a použijeme "pružiny" */
+    justify-content: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f4d8e6;
+    overflow-y: auto;
     overflow-x: hidden;
+}
+
+    /* Trik s pružinami: vložíme neviditelný prostor nad a pod obsah */
+    .screen::before,
+    .screen::after {
+        content: "";
+        flex-grow: 1; /* Tyto dvě "pružiny" tlačí obsah do středu */
+    }
+
+h1, .initials, .heart-wrapper, #instruction {
+    flex-shrink: 0; /* PŘÍSNÝ ZÁKAZ SMRŠŤOVÁNÍ */
 }
 
 /* Nadpisy Great Vibes (ozdobné) */
