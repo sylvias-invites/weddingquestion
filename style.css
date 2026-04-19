@@ -11,32 +11,27 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    /* Odstraněno justify/align center z body, aby to netlačilo .screen */
-    font-family: 'Alex Brush', cursive;
+    /* Odstraněno flex z body, aby neházelo screen do strany */
+    font-family: 'Great Vibes', cursive;
     color: #2d2d2d;
+    overflow-x: hidden;
 }
 
 .screen {
     width: 100%;
     max-width: 500px;
-    margin: 0 auto;
-    min-height: 100dvh; /* Přesná výška mobilního displeje */
+    margin: 0 auto; /* Toto zajistí vycentrování celého bloku na střed */
+    min-height: 100dvh;
     background: #f4d8e6;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Všechno hezky na střed */
-    align-items: center;
+    justify-content: center; /* Vertikální centrování */
+    align-items: center; /* Horizontální centrování prvků */
     padding: 20px;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
-
-    /* Trik s pružinami: vložíme neviditelný prostor nad a pod obsah */
-    .screen::before,
-    .screen::after {
-        content: "";
-        flex-grow: 1; /* Tyto dvě "pružiny" tlačí obsah do středu */
-    }
+   
 
 h1, .initials, .heart-wrapper, #instruction {
     flex-shrink: 0; /* PŘÍSNÝ ZÁKAZ SMRŠŤOVÁNÍ */
@@ -76,7 +71,7 @@ h1 {
 
 .invite-text h2 {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin-bottom: 5px;
     font-weight: 400;
 }

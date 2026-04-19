@@ -308,8 +308,6 @@ startCountdown();
 // Spustit hned
 startCountdown();
 
-
-// Funkce pro ANO
 // Funkce pro ANO
 function answerYes() {
     // 1. Najdeme kontejner s textem
@@ -317,7 +315,7 @@ function answerYes() {
 
     if (inviteContainer) {
         // 2. Kompletně přepíšeme celý vnitřek - tím zmizí H2, datum i countdown
-        inviteContainer.innerHTML = "<h2 style='font-family: \"Great Vibes\", cursive; font-size: 2.5rem;line-height: 1.1;'>Děkuji ti moc a budu se těšit!<br>❤️</h2>";
+        inviteContainer.innerHTML = "<h2 style='font-family: \"Great Vibes\", cursive; font-size: 2.2rem;line-height: 1.1;'>Děkuji ti moc a budu se těšit!<br>❤️</h2>";
 
         // 3. Vynutíme viditelnost (kdyby náhodou)
         inviteContainer.style.opacity = "1";
