@@ -17,6 +17,7 @@ body {
     overflow-x: hidden;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .screen {
@@ -100,12 +101,12 @@ h1 {
 }
 
 .heart-wrapper {
-    width: 85%; /* Srdce zabere 85% šířky dostupné v .screen */
+    width: 90vw; /* Srdce zabere 85% šířky dostupné v .screen */
     max-width: 330px; /* Aby na velkých mobilech nebylo obří */
     aspect-ratio: 1 / 1;
     position: relative;
     z-index: 2;
-    margin: 0 auto !important; /* Vycentrování bez vertikálních marginů */
+    margin: 10px auto !important; /* Menší mezery nad a pod */
     flex-shrink: 0; /* Zakáže prohlížeči srdce mačkat */
     background: transparent !important;
     opacity: 0;
