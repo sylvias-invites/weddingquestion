@@ -19,22 +19,22 @@ body {
 
 .screen {
     width: 100%;
-    min-width: 100vh;
-    height: auto; /* Změna z min-height na pevnou výšku */
+    max-width: 500px;
+    min-height: 100vh;
     margin: 0 auto;
+
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Držíme střed */
-    align-items: center;
-    padding: 10px;
-    gap: 5px; /* Toto vytvoří malé mezery mezi nadpisem, datem a srdcem automaticky */
-    position: relative;
-    overflow: hidden;
-} 
 
-h1, .initials, .heart-wrapper, #instruction {
-    flex-shrink: 0; /* PŘÍSNÝ ZÁKAZ SMRŠŤOVÁNÍ */
+    justify-content: flex-start; /* 🔥 místo center */
+    align-items: center;
+
+    padding: 40px 10px 20px; /* přidáme prostor nahoře */
+    gap: 10px;
+
+    overflow-y: auto; /* důležité */
 }
+
 
 /* Nadpisy Great Vibes (ozdobné) */
 h1, h2.info-titlet, h3.info-subtitle, h3.info-title-airy, .initials, h4 {
@@ -47,7 +47,6 @@ h1 {
     font-size: 3.8rem !important;
     margin: 0 !important; /* Žádný margin, mezeru řeší 'gap' v .screen */
     line-height: 1.1;
-    flex-shrink: 0 !important; /* ZÁKAZ SMRŠTĚNÍ */
 }
 
 
@@ -57,7 +56,6 @@ h1 {
     color: black;
     margin: 0 !important; /* Přitáhne iniciály k h1 a srdci */
     line-height: 1;
-    flex-shrink: 0 !important; /* ZÁKAZ SMRŠTĚNÍ */
 }
 
 #instruction {
@@ -68,7 +66,6 @@ h1 {
     font-size: 1.4rem !important;
     letter-spacing: 2px;
     line-height: 1;
-    flex-shrink: 0 !important; /* ZÁKAZ SMRŠTĚNÍ */
 }
 
 .invite-text h2 {
