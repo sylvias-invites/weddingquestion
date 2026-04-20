@@ -36,7 +36,7 @@ html, body {
     justify-content: flex-start; /* 🔥 místo center */
     align-items: center;
 
-    padding: 40px 10px 20px; /* přidáme prostor nahoře */
+    padding: 60px 10px 20px; /* přidáme prostor nahoře */
     gap: 10px;
     overflow-x: hidden;
 
