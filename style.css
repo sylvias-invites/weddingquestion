@@ -33,10 +33,10 @@ html, body {
     display: flex;
     flex-direction: column;
 
-    justify-content: flex-start; /* 🔥 místo center */
+    justify-content: center; /* 🔥 místo center */
     align-items: center;
 
-    padding: 60px 10px 20px; /* přidáme prostor nahoře */
+   /* padding: 40px 10px 20px; /* přidáme prostor nahoře */
     gap: 10px;
     overflow-x: hidden;
 
