@@ -15,6 +15,11 @@ body {
     color: #2d2d2d;
     overflow-x: hidden;
     /* Žádný flex, žádné centrování tady! */
+    position: relative;
+}
+
+html, body {
+    overflow-x: hidden;
 }
 
 .screen {
@@ -97,7 +102,7 @@ h1 {
 }
 
 .heart-wrapper {
-    width: 90vw; /* Srdce zabere 85% šířky dostupné v .screen */
+    width: 90%; /* Srdce zabere 85% šířky dostupné v .screen */
     max-width: 330px; /* Aby na velkých mobilech nebylo obří */
     aspect-ratio: 1 / 1;
     position: relative;
