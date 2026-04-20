@@ -19,8 +19,8 @@ body {
 
 .screen {
     width: 100%;
-    max-width: 500px;
-    height: 100dvh; /* Změna z min-height na pevnou výšku */
+    min-width: 100vh;
+    height: auto; /* Změna z min-height na pevnou výšku */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
