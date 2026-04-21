@@ -323,7 +323,6 @@ startCountdown();
 function answerYes() {
     // 1. Najdeme kontejner s textem
     emailjs.send("service_6omrk9m", "template_ealon11", {
-        guestName: guestName,
 
         message: `${guestName} potvrdila, že bude tvá družička💖`,
 
