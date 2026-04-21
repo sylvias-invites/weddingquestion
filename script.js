@@ -6,6 +6,8 @@ if (!guestName) {
     guestName = "host";
 }
 
+emailjs.init("vViWQlU51gqIyzRWG");
+
 const canvas = document.getElementById("scratch");
 const ctx = canvas.getContext("2d");
 const instruction = document.getElementById("instruction");
@@ -321,11 +323,9 @@ startCountdown();
 function answerYes() {
     // 1. Najdeme kontejner s textem
     emailjs.send("service_6omrk9m", "template_ealon11", {
-        guest_name: name,
+        guest_name: guestName,
 
-        guest_email: email,
-
-        message: `${name} potvrdila, že bude tvá družička💖`,
+        message: `${guestName} potvrdila, že bude tvá družička💖`,
 
 
     }).then(function(response) {
@@ -343,7 +343,7 @@ function answerYes() {
 
     if (inviteContainer) {
         // 2. Kompletně přepíšeme celý vnitřek - tím zmizí H2, datum i countdown
-        inviteContainer.innerHTML = "<h2 style='font-family: \"Great Vibes\", cursive; font-size: 2rem;line-height: 1.1;'>Děkuji ti moc ${guestName} a budu se těšit!<br>❤️</h2>";
+        inviteContainer.innerHTML = `<h2 style='font-family: \"Great Vibes\", cursive; font-size: 2rem;line-height: 1.1;'>Děkuji ti moc ${guestName} a budu se těšit!<br>❤️</h2>`;
 
         // 3. Vynutíme viditelnost (kdyby náhodou)
         inviteContainer.style.opacity = "1";
