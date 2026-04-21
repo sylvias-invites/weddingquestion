@@ -6,7 +6,7 @@ if (!guestName) {
     guestName = "host";
 }
 
-emailjs.init("vViWQlU51gqIyzRWG");
+emailjs.init("3ZJ8z_cmHx8EN_lPw");
 
 const canvas = document.getElementById("scratch");
 const ctx = canvas.getContext("2d");
