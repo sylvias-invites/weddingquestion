@@ -6,7 +6,7 @@ if (!guestName) {
     guestName = "host";
 }
 
-emailjs.init("vViWQlU51gqIyzRWG");
+emailjs.init("vViWQlU51gqIyzRWG")
 
 const canvas = document.getElementById("scratch");
 const ctx = canvas.getContext("2d");
@@ -323,7 +323,7 @@ startCountdown();
 function answerYes() {
     // 1. Najdeme kontejner s textem
     emailjs.send("service_6omrk9m", "template_ealon11", {
-        guest_name: guestName,
+        guestName: guestName,
 
         message: `${guestName} potvrdila, že bude tvá družička💖`,
 
